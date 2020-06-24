@@ -45,3 +45,32 @@ module.exports = {
 };
 
 ```
+
+7. Create src folder
+8. Rename App.js to App.tsx and move to src folder
+9. Edit App.tsx
+
+```
+App.tsx
+
+ * @format
+ * @flow strict-local
+import React from 'react';
+import Styled from 'styled-components/native';
+import Counter from './Screens/Counter';
+
+const Container = Styled.View`
+  flex:1;
+  background-color: #EEE;
+`;
+
+const App = () => {
+  return (
+    <Container>
+      <Counter title="This is a Counter App" initValue={5}></Counter>
+    </Container>
+  );
+};
+
+export default App;
+```
